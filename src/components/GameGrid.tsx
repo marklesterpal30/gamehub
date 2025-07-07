@@ -9,7 +9,7 @@ const GameGrid = () => {
 			{error && <Text>{error}</Text>}
 			<SimpleGrid
 				padding={10}
-				columns={{ sm: 1, md: 2, lg: 3, xl: 5 }}
+				columns={{ sm: 1, md: 2, lg: 3 }}
 				spacing={10}
 			>
 				{games.map((game) => (
