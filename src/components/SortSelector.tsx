@@ -1,0 +1,25 @@
+import React from "react";
+import { Menu, MenuButton, MenuList, MenuItem, Button } from "@chakra-ui/react";
+import { BsChevronDown } from "react-icons/bs";
+
+const SortSelector = () => {
+	return (
+		<>
+			<Menu>
+				<MenuButton as={Button} rightIcon={<BsChevronDown />}>
+					Order by: Relevance
+				</MenuButton>
+				<MenuList>
+					<MenuItem>Relevance</MenuItem>
+					<MenuItem>Date dded</MenuItem>
+					<MenuItem>Name</MenuItem>
+					<MenuItem>Release Date</MenuItem>
+					<MenuItem>Popularity</MenuItem>
+					<MenuItem>Average reating</MenuItem>
+				</MenuList>
+			</Menu>
+		</>
+	);
+};
+
+export default SortSelector;
