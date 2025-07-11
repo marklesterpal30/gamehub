@@ -5,15 +5,16 @@ import GameGrid from "./components/GameGrid";
 import GenreList from "./components/GenreList";
 import { Genres } from "./hooks/useGenres";
 import PlatformSelector from "./components/PlatformSelector";
-import { Game, Platform } from "./hooks/useGames";
 import SortSelector from "./components/SortSelector";
 import GameHeading from "./components/GameHeading";
+import { Platform } from "./hooks/usePlatforms";
 
 export interface GameQuery {
 	genre: Genres | null;
 	platform: Platform | null;
 	sortOrder: string;
 	searchText: string;
+	publisher: string;
 }
 
 const App = () => {
