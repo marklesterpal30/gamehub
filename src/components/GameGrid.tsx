@@ -3,15 +3,11 @@ import useGames from "../hooks/useGames";
 import GameCard from "./GameCard";
 import GameCardSkeleton from "./GameCardSkeleton";
 import GameCardContainer from "./GameCardContainer";
-import { GameQuery } from "../App";
 import { Button } from "@chakra-ui/react";
 import InfiniteScroll from "react-infinite-scroll-component";
+import useGameQueryStore from "../store";
 
-interface Props {
-	gameQuery: GameQuery;
-}
-
-const GameGrid = ({ gameQuery }: Props) => {
+const GameGrid = () => {
 	const {
 		data,
 		error,
@@ -19,7 +15,8 @@ const GameGrid = ({ gameQuery }: Props) => {
 		isFetchingNextPage,
 		fetchNextPage,
 		hasNextPage,
-	} = useGames(gameQuery);
+	} = useGames();
+
 	const cardcount = [1, 2, 3, 4, 5, 11];
 
 	const fetchGamesCount =
